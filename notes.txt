@@ -1,0 +1,89 @@
+
+problem --> algo -> solution ->  programs -> Lang -> 
+
+
+
+    a -> 90 100 10 50 -> 250 
+    b ->              -> 350 
+
+
+
+Data Structure --> ? 
+
+            cost --> memory , time 
+
+
+ facebook -> 25 second -> Home -> 
+
+ facebook -> loading........................................ -> Home ->  Galaxy 256MB 512MB
+            350 MB -> 256 MB 
+ facebook ->   Home ->  iphone -> 256 MB 
+
+ facebook lite --> 150 MB 
+
+code -> 350 MB 
+code -> 150 MB 
+
+
+
+readymade -> algo -> programs ->  Rule-> 
+
+
+    kutch -> 4  *  4 
+    express -> 
+
+
+google search --> linear binary n/2 -->  custom search 
+
+Stack -> 
+        program ? 
+
+
+
+
+-------------------------------------------------------------------------------------------
+
+                            Data Structure 
+        Linear                                          Non Linear
+
+        Array                                           tree 
+        Stack                                           graph 
+        Queue                                           
+        Linked List  
+
+
+        sorting -> bubble selection insertion merge quick 
+        searching -> linear , binary 
+
+
+-------------------------------------------------------------------------------------------
+
+
+Array ----> 
+        collection of same type of data type  having conti. memory allocation 
+
+        int a[5];//block 4 byte * 5 => 20 byte 
+
+        you can access your array using index 
+
+        index starts with 0 and ends with SIZE - 1 
+
+
+storage class -> 
+            auto : local 
+            extern : global  : 0 
+            static : memory address : 
+            register : register  memory 
+
+
+------------------------------------------------------------------------------------------
+
+
+
+Array :- 
+
+        searching -> 1)  linear search - line by line - sequential search 
+                     2)  binary search 
+
+
+linearSearch(array,search);
