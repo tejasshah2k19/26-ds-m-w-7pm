@@ -87,3 +87,20 @@ Array :-
 
 
 linearSearch(array,search);
+
+
+
+
+binary search ---> 
+-------------------------------------------------------------
+
+
+STACK --->  LIFO : Last In First Out 
+
+whatsApp Chat -> 
+history -> process -> call history -> browser history 
+Gallery ->
+
+function -> recursion ->
+
+----------------------------------------------------------------
