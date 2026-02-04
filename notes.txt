@@ -104,3 +104,19 @@ Gallery ->
 function -> recursion ->
 
 ----------------------------------------------------------------
+1) bubble sort 
+2) selection sort 
+
+
+
+Sorting --->
+
+        lower --- higher  --> ASC 
+        higher --- lower  --> DSC 
+
+10      5       16      25      19      70      62
+
+
+ASC => 5 10 16 19 25 62 70
+DSC => 70 62 25 19 16 10 5 
+
