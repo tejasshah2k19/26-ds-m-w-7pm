@@ -5,6 +5,7 @@ struct node
 {
     int data;
     struct node *next;
+    struct node *prev;
 };
 
 struct node *head = NULL; // implicit
@@ -30,6 +31,7 @@ void addNode(int num)
         head = (struct node *)malloc(sizeof(struct node));
         head->data = num;
         head->next = head;
+        head->prev = NULL;
         last = head;
     }
     else
@@ -39,6 +41,7 @@ void addNode(int num)
         tmp->data = num;
         tmp->next = NULL;
         last->next = tmp;
+        tmp->prev = last;
         last = tmp;
     }
 }
@@ -58,6 +61,8 @@ void addNodeBeg(int num)
     tmp = (struct node *)malloc(sizeof(struct node));
     tmp->data = num;
     tmp->next = head;
+    tmp->prev=NULL; 
+    head->prev=tmp; 
     head = tmp;
 }
 
@@ -121,6 +126,9 @@ void addNodeAny(int src, int num)
         tmp = malloc(sizeof(struct node));
         tmp->data = num;
         tmp->next = p->next;
+        //
+        //
+        //
         p->next = tmp;
     }
     else
@@ -146,10 +154,10 @@ void delEnd()
         p = p->next;
     }
 
-    //q = p->next; //if no last 
+    // q = p->next; //if no last
 
     p->next = NULL;
-    free(last);//free(q); 
+    free(last); // free(q);
     last = p;
 }
 
