@@ -42,7 +42,7 @@ void display()
     while (p != NULL)
     {
         printf(" %d", p->data); // 10 20 30 40 50
-        p = p->next;            //
+        p = p->next;
     }
 }
 
@@ -74,9 +74,7 @@ int main()
             break;
         }
     }
-    return 0;
 }
-
 // round -> white
 // white - round - fev
 // white - round - st
