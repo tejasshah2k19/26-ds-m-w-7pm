@@ -10,18 +10,41 @@ int rear = -1;
 void enQueue(int data)
 {
 
-    rear++; //-1 => 0 , 0 => 1 ,
-    queue[rear] = data;
-    if (front == -1)
+    if (rear == SIZE - 1)
     {
-        front = 0;
+        printf("\nQueue is Full");
+    }
+    else
+    {
+
+        rear++; //-1 => 0 , 0 => 1 ,
+        queue[rear] = data;
+        if (front == -1)
+        {
+            front = 0;
+        }
     }
 }
 
 void deQueue()
 {
+
+    if (front == -1)
+    {
+        printf("\nQueue underflow nothing to be delete");
+        return;
+    }
+
     printf("\n %d removed ", queue[front]);
-    front++;
+    if (front == rear)
+    {
+        front = -1;
+        rear = -1;
+    }
+    else
+    {
+        front++;
+    }
 }
 
 void display()
