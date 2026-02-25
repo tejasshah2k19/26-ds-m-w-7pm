@@ -182,3 +182,49 @@ DMA -> stdlib.h
 
         free()
 
+-------------------------------------------------------------------------------------
+
+MERGE Sort --> 
+
+
+1) 2 array -> sort -> 1 array -
+2) 1 array -> sort -> 1 array - 
+
+
+a = [ 10 20 30 40 50 ]  # 5 => sorted 
+b = [ 5  15 35 45 60 ]  # 5 => sorted 
+c = [ 5 10 15 20 30 35 40 45 50 60 ] # 10 
+
+
+
+a       10      20      30      40      50      
+                i
+
+b       5       15      35     45       60
+                        j
+
+c       5       10      15  
+                                k
+
+
+i=0;
+j=0;
+k=0;
+while( i < 5 && j < 5){
+        if( a[i] < b[j]){
+                c[k] = a[i]; 
+                i++;
+        }else{
+                c[k] = b[j];
+                j++; 
+        }
+        k++;
+}
+
+
+declare all the array with their 
+display 
+call display a , b , c 
+
+mergeSort() 
+--------------------------------------------
