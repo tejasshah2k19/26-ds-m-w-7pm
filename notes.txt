@@ -228,3 +228,47 @@ call display a , b , c
 
 mergeSort() 
 --------------------------------------------
+
+stdlib.h 
+DMA -> 
+
+                allocate
+                        calloc()
+                        malloc()
+                release
+                        free()
+
+                        realloc() 
+
+--------------------------------------------
+variable -> is used to store the value 
+              int   a = 10 ;
+              int b = 20 ;
+              char   c = 'x'; 
+
+
+pointer -> memory address 
+        pointer variable -->  is used to store address of a variable 
+                        int *p;                 
+
+------------------------------------------------
+
+pointer -->
+                & => address of 
+                * => value at 
+
+
+
+                int a;//4 byte 
+                int *p;  
+                float f; 
+                float *q;
+
+
+                a = 20; 
+                f = 90; 
+
+                p = &a; 
+                q = &f; 
+
+------------------------------------------------
