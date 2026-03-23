@@ -272,3 +272,168 @@ pointer -->
                 q = &f; 
 
 ------------------------------------------------
+
+
+int a; // 4 byte 
+
+int x[5] ; // 20 bytes 
+
+
+DMA -> allocate , release 
+
+        calloc()
+        malloc()
+
+        free()
+
+        realloc()
+
+   -> stdlib.h 
+
+
+
+variable  ------> to store the value 
+                
+                int a = 10; 
+
+pointer variable ------->      address of another variable 
+
+                int *p =  &a;  // adderss of a
+
+& -> address of 
+* -> value at  
+
+
+					
+					
+					
+					
+					
+					* => value at 
+					
+					*p
+					
+					value at p
+					
+					value at 400
+					
+					
+p	400	500			
+a	20	400	401	402	403
+	stack	address			
+					
+				pf %d a 	20
+				pf p	400
+					400
+					500
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------       
+
+royal app -> 
+                student 
+                        name   char[]
+                        rollNum  int 
+                        city     char[]
+
+structure -> collection of mix type of data 
+
+struct student {
+        char name[20];//20
+        char city[20];//20
+        int rollNum; //4 
+};
+
+
+struct student s; //44+ 
+
+struct student s[50]; //44+ 
+
+
+printf("Enter name city and rollNum");
+scanf("%s%s%d",&s.name,&s.city,&s.rollNum);
+
+
+printf("Enter name city and rollNum");
+scanf("%s%s%d",&s[i].name,&s[i].city,&s[i].rollNum);
+
+
+
+
+
+
+3 stduents 
+
+void getData(3);
+
+void printData(3);
+
+
+Name  Maths     Eng     Sci     Per  
+Y       50      50      50      50
+Z       60      60      60      60      
+
+--------------------------------------------
+
+
+
+calloc() -> 
+
+malloc()  -> 
+
+int x -> 4 byte -> malloc 
+
+int x[50] -> 4 byte * 50 -> calloc 
+
+struct student s -> malloc 
+
+-------------------------------------------------------------------------
+
+DMA 
+
+allocate ->
+                calloc 
+                malloc 
+
+release -> 
+                free 
+
+resize ->
+                realloc 
+
+stdlib.h 
+
+
+
+malloc(25);  //25 byte -> 1 block 
+calloc(5,5);//25 byte -> 5 blocks  
+
+
+int a; // 4 byte --> malloc 
+int b[5] //4 byte * 5 block  ---> calloc 
+
+memory --->  pointer;
+
+int a;
+a = malloc(4); //wrong 
+
+
+int *a;
+a  = malloc(4); 
+a  = malloc(sizeof(int)); 
+
+
+
+structure -> pointer 
+
+
+struct student s[20]; // 
+
+struct student *s; // calloc(20,sizeof(struct student))

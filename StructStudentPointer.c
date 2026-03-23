@@ -11,6 +11,8 @@ struct student *s;
 
 void getData(int n)
 {
+    struct student p;
+    s = &p; 
     printf("\nEnter name and marks of three subjects");
     scanf("%s%d%d%d", &s->name, &s->maths, &s->sci, &s->eng);
     s->perc = (s->maths + s->sci + s->eng) / 3;
