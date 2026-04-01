@@ -46,6 +46,7 @@ int main()
         printf("\n0 For Exit");
         printf("\n1 For Add student");
         printf("\n2 For Display");
+        printf("\n3 For Count Total Students");
         printf("\nEnter choice : ");
 
         scanf("%d", &choice);
@@ -58,19 +59,33 @@ int main()
             addStudent();
             break;
         case 2:
-            printf(" %s ",s->name);
-            printf(" %s ",s->next->name);
-            printf(" %s ",s->next->next->name);
-            printf(" %s ",s->next->next->next->name);
-            
+            struct student *p;
+            p = head;
+
+            while (p != NULL)
+            {
+                printf(" %s ", p->name); // ram
+                p = p->next;
+            }
+
             break;
+        case 3:
+            p = head;
+            int count =0; 
+            while (p != NULL)
+            {
+                count++; 
+                p = p->next;
+            }
+
+            printf("\nTotal Students = %d",count);
+            break;
+
         default:
             printf("\nInvalid Choice");
             break;
         }
     }
-
-
 
     return 0;
 }

@@ -437,3 +437,8 @@ structure -> pointer
 struct student s[20]; // 
 
 struct student *s; // calloc(20,sizeof(struct student))
+
+
+search ---> 
+
+
