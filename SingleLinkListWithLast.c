@@ -146,11 +146,51 @@ void delEnd()
         p = p->next;
     }
 
-    //q = p->next; //if no last 
+    // q = p->next; //if no last
 
     p->next = NULL;
-    free(last);//free(q); 
+    free(last); // free(q);
     last = p;
+}
+
+void deleteAny(int num)
+{
+    // 60 10 20 30 40 50 70
+    // head              last
+    //       p
+    int found = 0;
+    struct node *p;
+    if (head->data == num)
+    {
+        delBeg();
+    }
+    else if (last->data == num)
+    {
+        delEnd();
+    }
+    else
+    {
+        // 30
+        // 300
+        p = head;
+
+        while (p != NULL)
+        {
+            if (p->next->data == num)
+            {
+                found = 1;
+                break;
+            }
+            p = p->next; 
+        }
+
+        if(found == 1){
+            //delete 
+            p->next = p->next->next; 
+        }else{
+            printf("\nInvalid Source ");
+        }
+    }
 }
 
 int main()
@@ -162,7 +202,7 @@ int main()
 
     while (1)
     {
-        printf("\n0 For Exit\n1 For Add END\n2 For List\n3 For Add BEG\n4 for Add Any:after\n5 For Delete Beg\n6 for Delete End\nEnter choice");
+        printf("\n0 For Exit\n1 For Add END\n2 For List\n3 For Add BEG\n4 for Add Any:after\n5 For Delete Beg\n6 for Delete End\n7 For Delete Any\nEnter choice");
         scanf("%d", &choice);
 
         switch (choice)
@@ -193,6 +233,11 @@ int main()
             break;
         case 6:
             delEnd();
+            break;
+        case 7:
+            printf("\nEnter the number that you want to delete? ");
+            scanf("%d", &num);
+            deleteAny(num);
             break;
         default:
             break;
