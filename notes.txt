@@ -442,3 +442,18 @@ struct student *s; // calloc(20,sizeof(struct student))
 search ---> 
 
 
+AVL : height balance tree 
+
+BF => LH - RH 
+valid BF -1 0 1 
+
+
+imbalance --->
+
+                RR imbalance    :  left rotate 
+                LL imbalance    :  right rotate 
+                RL imbalance    :  right roate , left rotate 
+                LR imbalance    :  left rotate , right rotate 
+
+rotation technique 
+
