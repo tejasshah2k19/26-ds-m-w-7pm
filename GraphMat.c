@@ -25,7 +25,7 @@ void printNeighbour(int vertex){
     }
 }
 
-int main(){
+int main(){ 
 
 
     input();
