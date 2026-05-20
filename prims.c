@@ -12,6 +12,7 @@ struct edge
 int totalEdges;
 struct edge *e;
 int *visited;
+int *dijArray;
 int totalVertex;
 int count = 0;
 
@@ -48,6 +49,10 @@ int isVisited(int v)
     return 0;
 }
 
+int getCost(int vertex){
+
+}
+
 int main()
 {
 
@@ -62,6 +67,8 @@ int main()
     totalEdges = totalEdges * 2; //
 
     e = calloc(totalEdges, sizeof(struct edge));
+
+    dijArray = calloc(totalVertex, sizeof(int));
 
     for (i = 0; i < totalEdges; i++)
     {
@@ -83,9 +90,10 @@ int main()
 
     visited = calloc(totalVertex, sizeof(int));
 
-    int v = 3;
+    int v = 5;
     printf(" %d ", v);
-
+    int initialVertex = v;
+    dijArray[count] = 0;
     visited[count++] = v;
 
     while (count != totalVertex)
@@ -93,6 +101,16 @@ int main()
 
         int index = findAdj(1000); // 3
         printf(" %d ", v);
+        // indirect -> + 5-7+ 7-9
+        if (e[index].src != initialVertex)
+        {
+            dijArray[count] = getCost(e[index].src) + e[index].cost;
+        }
+        else
+        {
+            dijArray[count] = e[index].cost; // direct
+        }
+
         visited[count++] = v;
     }
     return 0;
