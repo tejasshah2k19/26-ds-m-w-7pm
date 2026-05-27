@@ -5,6 +5,8 @@ struct node
 {
     int data;
     struct node *next;
+    struct node *prev; 
+
 } *head = NULL, *last = NULL;
 
 void addNode(int num) // 20
@@ -15,6 +17,7 @@ void addNode(int num) // 20
         head = malloc(sizeof(struct node)); // data , next
         head->data = num;
         head->next = NULL;
+        head->prev = NULL;
         last = head;
     }
     else
@@ -23,6 +26,7 @@ void addNode(int num) // 20
         tmp->data = num;
         tmp->next = NULL;
         last->next = tmp;
+        tmp->prev=  last; 
         last = tmp;
     }
 }
@@ -197,31 +201,31 @@ int main()
 
     display();
 
-    linearSearch(70); // 70 not present
-    linearSearch(40); // 40 present
+    // linearSearch(70); // 70 not present
+    // linearSearch(40); // 40 present
 
-    addNodeBeg(5);
-    display();
+    // addNodeBeg(5);
+    // display();
 
-    addNodeAny(30, -3);
+    // addNodeAny(30, -3);
 
-    addNodeAny(-30, 100);
+    // addNodeAny(-30, 100);
 
-    display();
+    // display();
 
-    delLast();
+    // delLast();
 
-    display();
+    // display();
 
-    delBeg();
+    // delBeg();
 
-    display();
+    // display();
 
-    delAny(30);
+    // delAny(30);
 
-    display();
+    // display();
 
-    countNode();
+    // countNode();
 
 
     //countNodeEven(); 
